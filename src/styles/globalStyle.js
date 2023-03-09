@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
   width: 100vw;
+  font-family: Karla, system-ui, Roboto, sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
@@ -15,6 +16,7 @@ html {
 ::before {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   font-family: ${(p) => p.theme.fonts.main};
@@ -34,18 +36,27 @@ body {
     border-radius: ${(p) => p.theme.borders.normal};
   }
 }
+
+a {
+  text-decoration: none;
+}
+
 ul, ol{
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 h1, h2, h3, h4, h5, h6, p{
   margin: 0;
+  padding: 0;
 }
+
 table {
   text-indent: 0;
   border-color: inherit;
 }
+
 button,
 input,
 optgroup,
@@ -60,9 +71,10 @@ button{
   cursor: pointer;
   border: none;
 }
+
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,
