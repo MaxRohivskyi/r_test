@@ -1,5 +1,7 @@
 export const theme = {
   colors: {
+    primary: "rgb(0,176,200)",
+    accent: "rgb(182,254,167)",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(0, 0, 0, 1)",
     searchText: "rgba(0, 0, 0, 0.5)",
@@ -15,7 +17,7 @@ export const theme = {
     mobileMin: "(min-width: 360px)",
     mobileMax: "(max-width: 767px)",
     tablet: "(min-width: 768px)",
-    desktop: "(min-width: 1440px)",
+    desktop: "(min-width: 1020px)",
   },
 
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
@@ -51,6 +53,7 @@ export const theme = {
   borders: {
     none: "none",
     normal: "1px solid",
+    large: "5px solid",
   },
 
   radii: {
@@ -64,6 +67,7 @@ export const theme = {
     shadowOne: "0px 1px 5px rgba(0, 0, 0, 0.2)",
     shadowTwo: "0px 3px 4px rgba(0, 0, 0, 0.12)",
     shadowThree: "0px 2px 4px rgba(0, 0, 0, 0.14)",
+    shadowAccent: "0px 1px 5px rgb(182,254,167)",
   },
 
   fonts: {
