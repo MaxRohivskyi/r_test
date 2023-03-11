@@ -64,10 +64,12 @@ export const theme = {
   },
 
   boxShadow: {
-    shadowOne: "0px 1px 5px rgba(0, 0, 0, 0.2)",
-    shadowTwo: "0px 3px 4px rgba(0, 0, 0, 0.12)",
-    shadowThree: "0px 2px 4px rgba(0, 0, 0, 0.14)",
-    shadowAccent: "0px 1px 5px rgb(182,254,167)",
+    shadowCard:
+      "0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14)",
+    shadowAccent:
+      "0px 1px 5px rgb(182,254,167, 1), 0px 3px 4px rgb(182,254,167, 0.9), 0px 2px 4px rgb(182,254,167, 0.8)",
+    shadowPrimary:
+      "0px 1px 5px rgb(0,176,200,1), 0px 3px 4px rgb(0,176,200,0.9), 0px 2px 4px rgb(0,176,200,0.8)",
   },
 
   fonts: {

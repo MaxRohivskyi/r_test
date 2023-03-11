@@ -9,13 +9,13 @@ export const LogoWrapper = styled.div`
 
 export const TextLogo = styled.p`
   color: ${(p) => p.theme.colors.primary};
-  font-size: ${(p) => p.theme.fontSizes.xs};
+  font-size: ${(p) => p.theme.fontSizes.s};
   font-weight: ${(p) => p.theme.fontWeights.bold};
-  @media ${(p) => p.theme.media.desktop} {
-    font-size: ${(p) => p.theme.fontSizes.s};
+  @media ${(p) => p.theme.media.tablet} {
+    font-size: ${(p) => p.theme.fontSizes.m};
   }
   @media ${(p) => p.theme.media.desktop} {
-    font-size: ${(p) => p.theme.fontSizes.m};
+    font-size: ${(p) => p.theme.fontSizes.l};
   }
 `;
 

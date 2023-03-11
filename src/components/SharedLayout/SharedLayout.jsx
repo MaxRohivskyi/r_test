@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import AppBar from "../AppBar";
 import Loader from "../Loader";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SharedLayout = () => {
   return (

@@ -10,6 +10,7 @@ export const AppBarWrapper = styled.header`
     display: flex;
   }
   @media ${(p) => p.theme.media.desktop} {
-    width: 1020px;
+    padding: 24px 24px 0;
+    width: 1068px;
   }
 `;

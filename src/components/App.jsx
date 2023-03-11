@@ -3,7 +3,7 @@ import { lazy } from "react";
 import NotFound from "./NotFound";
 
 const SharedLayout = lazy(() => import("./SharedLayout/SharedLayout"));
-// const Home = lazy(() => import("pages/Home"));
+const Home = lazy(() => import("../pages/Home/Home"));
 // const CharacterDetails = lazy(() => import("pages/CharacterDetails"));
 
 function App() {
@@ -11,12 +11,12 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          {/* <Route path="movies" element={<Home />}>
-            <Route
+          <Route index element={<Home />}>
+            {/* <Route
               path="character/:characterId"
               element={<CharacterDetails />}
-            />
-          </Route> */}
+            /> */}
+          </Route>
           {/* <Route path="auth" element={<Auth />} /> */}
         </Route>
         <Route path="*" element={<NotFound />} />
