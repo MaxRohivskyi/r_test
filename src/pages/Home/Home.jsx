@@ -33,23 +33,35 @@ const Home = () => {
         const characters = await fetchCharacters(query);
 
         if (characters.length > 0) {
-          const filteredCharacters = characters.filter((character) =>
-            character.name.toLowerCase().includes(query.toLowerCase())
-          );
-
-          const sortedCharacters = filteredCharacters.sort((a, b) =>
+          const sortedCharacters = characters.sort((a, b) =>
             a.name.localeCompare(b.name)
           );
           setCharacters(sortedCharacters);
           setStatus(Status.RESOLVED);
-        } else {
-          setStatus(Status.REJECTED);
-          toast.error("Something broke, please try again");
+        }
+
+        if (query) {
+          const filteredCharacters = characters
+            .filter((character) =>
+              character.name.toLowerCase().includes(query.toLowerCase())
+            )
+            .sort((a, b) => a.name.localeCompare(b.name));
+
+          setCharacters(filteredCharacters);
+          if (filteredCharacters.length > 0) {
+            toast.success("Hooray, we found some interesting characters");
+            setStatus(Status.RESOLVED);
+          } else {
+            toast.warning(
+              "You entered an incorrect character name, please try again!"
+            );
+            setStatus(Status.REJECTED);
+          }
         }
       } catch (error) {
         setStatus(Status.REJECTED);
         console.log(error.message);
-        toast.error("Something broke, please try again");
+        toast.error("Something broke, please try again!");
       }
     }
     fetch();
@@ -67,10 +79,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <Banner />
-      <Searchbar
-        handleInputChange={handleInputChange}
-        characters={characters}
-      />
+      <Searchbar handleInputChange={handleInputChange} />
       {status === "pending" && <Loader />}
       {status === "resolved" && (
         <CharactersList characters={characters} location={location} to={""} />

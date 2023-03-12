@@ -2,7 +2,6 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Formik, ErrorMessage } from "formik";
 import * as yup from "yup";
-import { toast } from "react-toastify";
 import {
   FormWrapper,
   SearchForm,
@@ -11,8 +10,8 @@ import {
   Icon,
 } from "./Searchbar.styled";
 
-const Searchbar = ({ handleInputChange, initialValue, characters }) => {
-  const [inputParam, setInputParam] = useState(initialValue || "");
+const Searchbar = ({ handleInputChange }) => {
+  const [inputParam, setInputParam] = useState("");
   const schema = yup.object().shape({
     inputParam: yup
       .string()
