@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { toast } from "react-toastify";
 import Searchbar from "../../components/Searchbar";
 import CharactersList from "../../components/CharactersList";
 import Banner from "../../components/Banner";
 import Loader from "../../components/Loader";
 import NotFound from "../../components/NotFound";
 import { HomeContainer } from "./Home.styled";
+import { toast } from "react-toastify";
 
 import { fetchCharacters } from "../../services/rickandmorty-api";
 
@@ -19,15 +19,14 @@ const Status = {
 };
 
 const Home = () => {
-  const location = useLocation();
-
   const [characters, setCharacters] = useState([]);
   const [status, setStatus] = useState("");
   const [searchParams, setSearchParams] = useSearchParams({});
+  const location = useLocation();
   const query = searchParams.get("query") ?? "";
 
   useEffect(() => {
-    async function fetch() {
+    const fetch = async () => {
       try {
         setStatus(Status.PENDING);
         const characters = await fetchCharacters(query);
@@ -63,7 +62,7 @@ const Home = () => {
         console.log(error.message);
         toast.error("Something broke, please try again!");
       }
-    }
+    };
     fetch();
   }, [query]);
 

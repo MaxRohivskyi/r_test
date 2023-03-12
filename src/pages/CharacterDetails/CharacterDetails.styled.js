@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const HomeContainer = styled.main`
-  padding: 0 24px 223px;
+export const CharacterDetailsContainer = styled.main`
+  padding: 32px 24px 85px;
   margin: 0 auto;
   @media ${(p) => p.theme.media.mobileMin} {
     width: 100%;
@@ -12,7 +12,7 @@ export const HomeContainer = styled.main`
   }
 
   @media ${(p) => p.theme.media.desktop} {
-    padding: 0 24px 188px;
+    padding: 32px 24px 142px;
     max-width: 1068px;
   }
 `;
