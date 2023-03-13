@@ -37,7 +37,7 @@ export const CardInfo = styled.ul`
   padding: 12px 16px;
 `;
 
-export const Name = styled.p`
+export const Name = styled.h2`
   color: ${(p) => p.theme.colors.cardTitle};
   font-size: ${(p) => p.theme.fontSizes.l};
   font-weight: ${(p) => p.theme.fontWeights.semiBold};

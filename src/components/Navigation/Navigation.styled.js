@@ -8,7 +8,7 @@ export const Link = styled(NavLink)`
   font-weight: ${(p) => p.theme.fontWeights.bold};
   border: ${(p) => p.theme.borders.normal} ${(p) => p.theme.colors.primary};
   border-radius: ${(p) => p.theme.radii.normal};
-  box-shadow: ${(p) => p.theme.boxShadow.shadowAccent};
+  box-shadow: ${(p) => p.theme.boxShadow.shadowCard};
   text-decoration: none;
   &:nth-child(2) {
     margin-left: 5px;
@@ -16,6 +16,11 @@ export const Link = styled(NavLink)`
   &.active {
     color: ${(p) => p.theme.colors.accent};
     background-color: ${(p) => p.theme.colors.primary};
+    box-shadow: ${(p) => p.theme.boxShadow.shadowAccent};
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: ${(p) => p.theme.boxShadow.shadowPrimary};
   }
   @media ${(p) => p.theme.media.tablet} {
     padding: 12px 20px;

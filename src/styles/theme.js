@@ -8,9 +8,11 @@ export const theme = {
     searchIcon: "rgba(0, 0, 0, 0.54)",
     cardTitle: "rgba(0, 0, 0, 0.87)",
     cardText: "rgba(0, 0, 0, 0.6)",
-    characterTitle: "rgba(8, 31, 50, 1)",
+    informationIcon: "rgba(242, 242, 247, 1)",
+    infoCharacterTitle: "rgba(8, 31, 50, 1)",
     informationTitle: "rgba(142, 142, 147, 1)",
-    informationText: "rgba(8, 31, 50, 1)",
+    informationBorderLine: "rgba(33, 33, 33, 0.08)",
+    informationText: "rgba(110, 121, 140, 1)",
   },
 
   media: {
