@@ -1,4 +1,4 @@
-import{s as o,u as h,j as t,a as i}from"./index-d6ec8ce6.js";import{L as d}from"./Loader-9899c372.js";import{G as l}from"./iconBase-ebe5d37f.js";function c(e){return l({tag:"svg",attr:{viewBox:"0 0 16 17"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"}}]})(e)}const x=o.main`
+import{s as o,u as h,j as t,a as i}from"./index-94c0fe1e.js";import{L as d}from"./Loader-989a96b6.js";import{G as l}from"./iconBase-4f9c4e8f.js";function c(e){return l({tag:"svg",attr:{viewBox:"0 0 16 17"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"}}]})(e)}const x=o.main`
   padding: 0 24px;
   margin: 0 auto 20px;
   @media ${e=>e.theme.media.tablet} {
