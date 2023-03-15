@@ -1,4 +1,4 @@
-import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-468b0abc.js";import{G as b}from"./iconBase-c7385c8f.js";import{L as w}from"./Loader-61fbcad2.js";import{Q as C}from"./react-toastify.esm-6d86a0a2.js";import{a as I}from"./rickandmorty-api-43a2f9f2.js";const S=i.main`
+import{s as i,j as t,d as p,g as $,r as d,i as j,f as u}from"./index-855011f2.js";import{G as b}from"./iconBase-af38a13d.js";import{L as w}from"./Loader-3af67ec5.js";import{Q as C}from"./react-toastify.esm-ffc341bc.js";import{a as I}from"./rickandmorty-api-43a2f9f2.js";const S=i.main`
   @media ${e=>e.theme.media.tablet} {
     display: flex;
     flex-direction: column;
