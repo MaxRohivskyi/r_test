@@ -14,7 +14,7 @@ import {
   GoogleIcon,
   FacebookIcon,
 } from "./SignIn.styled";
-import { useEffect } from "react";
+
 const SignIn = () => {
   const googleProvider = new GoogleAuthProvider();
   const GoogleLogin = async () => {
@@ -33,13 +33,6 @@ const SignIn = () => {
   const FaceBookLogin = async () => {
     try {
       const result = await signInWithPopup(auth, fbProvider);
-
-      // const credential = await FacebookAuthProvider.credentialFromResult(
-      //   result
-      // );
-      // const token = credential.accessToken;
-      // let photoUrl = result.user.photoURL + "?height=500&access_token=" + token;
-      // await updateProfile(auth.currentUser, { photoURL: photoUrl });
 
       const userId = result.user.uid;
 
