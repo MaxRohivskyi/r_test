@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CharacterDetailsContainer = styled.main`
-  padding: 32px 24px 85px;
+  padding: 32px 24px 85px 24px;
   margin: 0 auto;
   @media ${(p) => p.theme.media.mobileMin} {
     width: 100%;

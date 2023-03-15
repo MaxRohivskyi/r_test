@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import Searchbar from "../../components/Searchbar";
 import CharactersList from "../../components/CharactersList";
 import Banner from "../../components/Banner";
@@ -20,16 +19,16 @@ const Status = {
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [status, setStatus] = useState("");
   const [searchParams, setSearchParams] = useSearchParams({});
-  const location = useLocation();
   const query = searchParams.get("query") ?? "";
 
   useEffect(() => {
     const fetch = async () => {
       try {
         setStatus(Status.PENDING);
-        const characters = await fetchCharacters(query);
+        const characters = await fetchCharacters();
 
         if (characters.length > 0) {
           const sortedCharacters = characters.sort((a, b) =>
@@ -38,25 +37,6 @@ const Home = () => {
           setCharacters(sortedCharacters);
           setStatus(Status.RESOLVED);
         }
-
-        if (query) {
-          const filteredCharacters = characters
-            .filter((character) =>
-              character.name.toLowerCase().includes(query.toLowerCase())
-            )
-            .sort((a, b) => a.name.localeCompare(b.name));
-
-          setCharacters(filteredCharacters);
-          if (filteredCharacters.length > 0) {
-            toast.success("Hooray, we found some interesting characters");
-            setStatus(Status.RESOLVED);
-          } else {
-            toast.warning(
-              "You entered an incorrect character name, please try again!"
-            );
-            setStatus(Status.REJECTED);
-          }
-        }
       } catch (error) {
         setStatus(Status.REJECTED);
         console.log(error.message);
@@ -64,7 +44,27 @@ const Home = () => {
       }
     };
     fetch();
-  }, [query]);
+  }, []);
+
+  useEffect(() => {
+    if (query) {
+      const filteredCharacters = characters
+        .filter((character) =>
+          character.name.toLowerCase().includes(query.toLowerCase())
+        )
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      setFilteredCharacters(filteredCharacters);
+      if (filteredCharacters.length > 0) {
+        toast.success("Hooray, we found some interesting characters");
+        setStatus(Status.RESOLVED);
+      } else {
+        toast.warning(
+          "You entered an incorrect character name, please try again!"
+        );
+      }
+    }
+  }, [query, characters]);
 
   const handleInputChange = (value) => {
     let query = value;
@@ -80,9 +80,15 @@ const Home = () => {
       <Banner />
       <Searchbar handleInputChange={handleInputChange} />
       {status === "pending" && <Loader />}
-      {status === "resolved" && (
-        <CharactersList characters={characters} location={location} to={""} />
+
+      {status === "resolved" && !query ? (
+        <CharactersList characters={characters} />
+      ) : filteredCharacters.length > 0 ? (
+        <CharactersList characters={filteredCharacters} />
+      ) : (
+        <NotFound />
       )}
+
       {status === "rejected" && <NotFound />}
     </HomeContainer>
   );

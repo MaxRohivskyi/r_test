@@ -47,8 +47,12 @@ export const Input = styled(Field)`
   width: 100%;
   font-size: ${(p) => p.theme.fontSizes.s};
   font-weight: ${(p) => p.theme.fontWeights.normal};
+  background-color: ${(p) => p.theme.colors.white};
   border: none;
   outline: none;
+  &::placeholder {
+    font: inherit;
+  }
 `;
 
 export const Icon = styled(MdSearch)`

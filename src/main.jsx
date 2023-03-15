@@ -16,3 +16,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+{
+  /* <HashRouter>
+  <ThemeProvider theme={theme}>
+    <App />
+    <GlobalStyle />
+  </ThemeProvider>
+</HashRouter>; */
+}

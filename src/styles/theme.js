@@ -13,6 +13,7 @@ export const theme = {
     informationTitle: "rgba(142, 142, 147, 1)",
     informationBorderLine: "rgba(33, 33, 33, 0.08)",
     informationText: "rgba(110, 121, 140, 1)",
+    facebook: "rgba(24, 119, 242, 1)",
   },
 
   media: {

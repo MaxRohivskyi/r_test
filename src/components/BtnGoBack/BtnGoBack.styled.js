@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { RiArrowLeftLine } from "react-icons/ri";
 
 export const Btn = styled.button`
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   width: 108px;

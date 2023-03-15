@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const CharacterInfoWrapper = styled.main`
-  margin: 0 auto;
-  width: 413px;
+  @media ${(p) => p.theme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const CharacterInfoHeader = styled.div`
@@ -59,9 +62,6 @@ export const CharacterInfoTitle = styled.h3`
   font-weight: ${(p) => p.theme.fontWeights.semiBold};
   line-height: ${(p) => p.theme.lineHeights.informationTitle};
   @media ${(p) => p.theme.media.tablet} {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 40px 0 0 0;
   }
   @media ${(p) => p.theme.media.desktop} {
@@ -70,12 +70,19 @@ export const CharacterInfoTitle = styled.h3`
 `;
 
 export const CharacterInfoList = styled.ul`
-  padding: 16px 0 0 0;
+  margin: 16px 0 0 0;
+  width: 100%;
+  @media ${(p) => p.theme.media.mobileMax} {
+    margin: 40px 0 0 0;
+    width: 312px;
+  }
   @media ${(p) => p.theme.media.tablet} {
-    padding: 40px 0 0 0;
+    margin: 40px 0 0 0;
+    width: 367px;
   }
   @media ${(p) => p.theme.media.desktop} {
-    padding: 48px 0 0 0;
+    margin: 48px 0 0 0;
+    width: 413px;
   }
 `;
 

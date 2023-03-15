@@ -13,7 +13,7 @@ import {
 
 const CharacterInfo = ({ character }) => {
   const { image, name, gender, status, species, origin, type } = character;
-  console.log(character);
+
   return (
     <CharacterInfoWrapper>
       <CharacterInfoHeader>
