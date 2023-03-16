@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import {
   CardWrapper,
   CardLink,
@@ -25,3 +26,11 @@ const CharactersItem = ({ id, name, species, image }) => {
 };
 
 export default CharactersItem;
+
+CharactersItem.propTypes = {
+  characters: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+  }),
+};

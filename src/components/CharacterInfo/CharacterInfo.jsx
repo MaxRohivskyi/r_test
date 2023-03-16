@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   CharacterInfoWrapper,
   CharacterInfoHeader,
@@ -60,3 +61,14 @@ const CharacterInfo = ({ character }) => {
 };
 
 export default CharacterInfo;
+
+CharacterInfo.propTypes = {
+  character: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    origin: PropTypes.object.isRequired,
+    type: PropTypes.string.isRequired,
+  }),
+};

@@ -1,4 +1,5 @@
 import CharactersItem from "../CharactersItem";
+import PropTypes from "prop-types";
 import { CharactersListWrapper } from "./CharactersList.styled";
 
 const CharactersList = ({ characters }) => {
@@ -22,3 +23,7 @@ const CharactersList = ({ characters }) => {
 };
 
 export default CharactersList;
+
+CharactersList.propTypes = {
+  characters: PropTypes.array,
+};
