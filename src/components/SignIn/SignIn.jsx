@@ -1,10 +1,4 @@
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-  FacebookAuthProvider,
-  updateProfile,
-} from "firebase/auth";
-import { auth } from "../../utils/firebase";
+import { useSignIn } from "../../hooks/useSignIn";
 import {
   SignInWrapper,
   SignInTitle,
@@ -16,31 +10,7 @@ import {
 } from "./SignIn.styled";
 
 const SignIn = () => {
-  const googleProvider = new GoogleAuthProvider();
-  const GoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-
-      const userId = result.user.uid;
-
-      localStorage.setItem("USER", userId);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const fbProvider = new FacebookAuthProvider();
-  const FaceBookLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, fbProvider);
-
-      const userId = result.user.uid;
-
-      localStorage.setItem("USER", userId);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const { GoogleLogin, FaceBookLogin } = useSignIn();
 
   return (
     <>
