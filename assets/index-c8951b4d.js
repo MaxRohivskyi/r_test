@@ -1,15 +1,15 @@
-import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js";import{G as b}from"./iconBase-4f9c4e8f.js";import{L as w}from"./Loader-989a96b6.js";import{Q as C}from"./react-toastify.esm-74cfcf71.js";import{a as I}from"./rickandmorty-api-43a2f9f2.js";const S=i.main`
+import{r as x,f as u,s as i,j as t,d as j,g as b,e as w}from"./index-326d19bf.js";import{Q as C}from"./react-toastify.esm-4c42de98.js";import{a as I,p as a}from"./index-ef5ea8c1.js";import{G as y}from"./iconBase-5879654e.js";import{L as S}from"./Loader-51620b8f.js";const g={IDLE:"idle",PENDING:"pending",RESOLVED:"resolved",REJECTED:"rejected"},T=()=>{const[e,r]=x.useState(),[s,o]=x.useState(""),{characterId:n}=u();return x.useEffect(()=>{(async()=>{try{o(g.PENDING);const h=await I(n);r(h),o(g.RESOLVED)}catch(h){o(g.REJECTED),console.log(h.message),C.error("Something broke, please try again!")}})()},[n]),{character:e,status:s}},E=i.main`
   @media ${e=>e.theme.media.tablet} {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-`,y=i.div`
+`,k=i.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-`,E=i.img`
+`,z=i.img`
   margin: 73px 0 0 0;
   width: 150px;
   height: 148px;
@@ -30,7 +30,7 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
     width: 300px;
     height: 300px;
   }
-`,T=i.h2`
+`,B=i.h2`
   margin: 34px 0 0 0;
   color: ${e=>e.theme.colors.infoCharacterTitle};
   font-size: ${e=>e.theme.fontSizes.xl};
@@ -45,7 +45,7 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
   @media ${e=>e.theme.media.desktop} {
     margin: 16px 0 0 0;
   }
-`,k=i.h3`
+`,v=i.h3`
   margin: 34.37px 0 0 0;
   color: ${e=>e.theme.colors.informationTitle};
   font-size: ${e=>e.theme.fontSizes.l};
@@ -57,7 +57,7 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
   @media ${e=>e.theme.media.desktop} {
     margin: 48px 0 0 0;
   }
-`,z=i.ul`
+`,L=i.ul`
   margin: 16px 0 0 0;
   width: 100%;
   @media ${e=>e.theme.media.mobileMax} {
@@ -72,13 +72,13 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
     margin: 48px 0 0 0;
     width: 413px;
   }
-`,h=i.li`
+`,m=i.li`
   margin: 9px 0 0 16px;
-`,m=i.h4`
+`,c=i.h4`
   color: ${e=>e.theme.colors.infoCharacterTitle};
   font-size: ${e=>e.theme.fontSizes.s};
   font-weight: ${e=>e.theme.fontWeights.bold};
-`,c=i.p`
+`,d=i.p`
   margin: 9px 0 11px 0;
   color: ${e=>e.theme.colors.informationText};
   font-size: ${e=>e.theme.fontSizes.xs};
@@ -89,7 +89,7 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
   width: 100%;
   color: ${e=>e.theme.colors.informationBorderLine};
   border-bottom: ${e=>e.theme.borders.normal};
-`,B=({character:e})=>{const{image:a,name:r,gender:o,status:n,species:g,origin:s,type:f}=e;return t.jsxs(S,{children:[t.jsxs(y,{children:[t.jsx(E,{src:a,alt:r}),t.jsx(T,{children:r})]}),t.jsx(k,{children:"Informations"}),t.jsxs(z,{children:[t.jsxs(h,{children:[t.jsx(m,{children:"Gender"}),t.jsx(c,{children:o}),t.jsx(l,{})]}),t.jsxs(h,{children:[t.jsx(m,{children:"Status"}),t.jsx(c,{children:n}),t.jsx(l,{})]}),t.jsxs(h,{children:[t.jsx(m,{children:"Specie"}),t.jsx(c,{children:g}),t.jsx(l,{})]}),t.jsxs(h,{children:[t.jsx(m,{children:"Origin"}),t.jsx(c,{children:s.name}),t.jsx(l,{})]}),t.jsxs(h,{children:[t.jsx(m,{children:"Type"}),t.jsx(c,{children:f===""?"unknown":f}),t.jsx(l,{})]})]})]})};function v(e){return b({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"g",attr:{},child:[{tag:"path",attr:{fill:"none",d:"M0 0h24v24H0z"}},{tag:"path",attr:{d:"M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"}}]}]})(e)}const L=i.button`
+`,$=({character:e})=>{const{image:r,name:s,gender:o,status:n,species:p,origin:h,type:f}=e;return t.jsxs(E,{children:[t.jsxs(k,{children:[t.jsx(z,{src:r,alt:s}),t.jsx(B,{children:s})]}),t.jsx(v,{children:"Informations"}),t.jsxs(L,{children:[t.jsxs(m,{children:[t.jsx(c,{children:"Gender"}),t.jsx(d,{children:o}),t.jsx(l,{})]}),t.jsxs(m,{children:[t.jsx(c,{children:"Status"}),t.jsx(d,{children:n}),t.jsx(l,{})]}),t.jsxs(m,{children:[t.jsx(c,{children:"Specie"}),t.jsx(d,{children:p}),t.jsx(l,{})]}),t.jsxs(m,{children:[t.jsx(c,{children:"Origin"}),t.jsx(d,{children:h.name}),t.jsx(l,{})]}),t.jsxs(m,{children:[t.jsx(c,{children:"Type"}),t.jsx(d,{children:f===""?"unknown":f}),t.jsx(l,{})]})]})]})};$.propTypes={character:a.shape({name:a.string.isRequired,gender:a.string.isRequired,status:a.string.isRequired,species:a.string.isRequired,origin:a.object.isRequired,type:a.string.isRequired})};function R(e){return y({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"g",attr:{},child:[{tag:"path",attr:{fill:"none",d:"M0 0h24v24H0z"}},{tag:"path",attr:{d:"M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"}}]}]})(e)}const D=i.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,7 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
     box-shadow: ${e=>e.theme.boxShadow.shadowCard};
     transform: scale(1.1);
   }
-`,D=i(v)``,H=()=>{const e=p(),a=$(),r=()=>{var o,n;(n=(o=e==null?void 0:e.state)==null?void 0:o.from)!=null&&n.location?a(e.state.from.location):a("/")};return t.jsxs(L,{type:"button",onClick:r,children:[t.jsx(D,{size:"24"}),"GO BACK"]})},G=i.main`
+`,H=i(R)``,G=()=>{const e=j(),r=b(),s=()=>{var o,n;(n=(o=e==null?void 0:e.state)==null?void 0:o.from)!=null&&n.location?r(e.state.from.location):r("/")};return t.jsxs(D,{type:"button",onClick:s,children:[t.jsx(H,{size:"24"}),"GO BACK"]})},W=i.main`
   padding: 32px 24px 85px 24px;
   margin: 0 auto;
   @media ${e=>e.theme.media.mobileMin} {
@@ -129,4 +129,4 @@ import{s as i,j as t,c as p,f as $,r as d,g as j,e as u}from"./index-94c0fe1e.js
     padding: 32px 24px 142px;
     max-width: 1068px;
   }
-`,x={IDLE:"idle",PENDING:"pending",RESOLVED:"resolved",REJECTED:"rejected"},W=()=>{const[e,a]=d.useState(),[r,o]=d.useState(""),{characterId:n}=j();return d.useEffect(()=>{(async()=>{try{o(x.PENDING);const s=await I(n);a(s),o(x.RESOLVED)}catch(s){o(x.REJECTED),console.log(s.message),C.error("Something broke, please try again!")}})()},[n]),t.jsxs(G,{children:[r==="pending"&&t.jsx(w,{}),r==="resolved"&&t.jsxs(t.Fragment,{children:[t.jsx(H,{}),t.jsx(B,{character:e})]}),r==="rejected"&&t.jsx(u,{})]})},A=W;export{A as default};
+`,q=()=>{const{character:e,status:r}=T();return t.jsxs(W,{children:[r==="pending"&&t.jsx(S,{}),r==="resolved"&&t.jsxs(t.Fragment,{children:[t.jsx(G,{}),t.jsx($,{character:e})]}),r==="rejected"&&t.jsx(w,{})]})},A=q;export{A as default};
