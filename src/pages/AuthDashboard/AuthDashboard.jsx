@@ -1,5 +1,4 @@
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../utils/firebase";
+import { useSignOut } from "../../hooks/useSignOut";
 import Loader from "../../components/Loader";
 import {
   AuthDashboardContainer,
@@ -14,12 +13,7 @@ import {
 } from "./AuthDashboard.styled";
 
 const AuthDashboard = () => {
-  const [user, loading] = useAuthState(auth);
-
-  const handleOnClick = () => {
-    localStorage.removeItem("USER");
-    auth.signOut();
-  };
+  const { loading, user, handleOnClick } = useSignOut();
 
   return (
     <main>

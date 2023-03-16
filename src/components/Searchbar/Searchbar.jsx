@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { Formik, ErrorMessage } from "formik";
-import * as yup from "yup";
+import { charactersSchemaValidation } from "../../helpers/charactersSchemaValidation";
 import {
   FormWrapper,
   SearchForm,
@@ -12,13 +12,6 @@ import {
 
 const Searchbar = ({ handleInputChange }) => {
   const [inputParam, setInputParam] = useState("");
-  const schema = yup.object().shape({
-    inputParam: yup
-      .string()
-      .required("Search field is required")
-      .matches(/^[A-Za-z]+$/, "Only English letters without symbols")
-      .trim(),
-  });
 
   const handleSubmit = (values, { resetForm }) => {
     handleInputChange(values.inputParam);
@@ -29,7 +22,7 @@ const Searchbar = ({ handleInputChange }) => {
     <Formik
       initialValues={{ inputParam }}
       onSubmit={handleSubmit}
-      validationSchema={schema}
+      validationSchema={charactersSchemaValidation}
     >
       <FormWrapper>
         <SearchForm>
@@ -49,8 +42,8 @@ const Searchbar = ({ handleInputChange }) => {
   );
 };
 
+export default Searchbar;
+
 Searchbar.propTypes = {
   handleInputChange: PropTypes.func.isRequired,
 };
-
-export default Searchbar;
